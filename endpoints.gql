@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type StringifyHostsResponse {
+  objectString: String!
+}
+
+type Query {
+  stringifyHosts(
+    """Array of selected hosts"""
+    selectedHosts: [SelectedHost!]!
+  ): StringifyHostsResponse!
+}
+
+input SelectedHost {
+  """Endpoint hostname"""
+  hostName: String!
+
+  """Endpoint hdSerial"""
+  hdSerial: Float!
+}
